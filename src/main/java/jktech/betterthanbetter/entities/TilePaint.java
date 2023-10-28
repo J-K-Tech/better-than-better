@@ -25,7 +25,7 @@ public class TilePaint extends Entity {
 	public final byte[] paintColors = new byte[384];
 	public ItemStack[] items = new ItemStack[3];
 	public String owner = "";
-	public World worldObj;
+	public BetterWorld worldObj;
 	public int xCoord;
 	public int yCoord;
 	public int zCoord;
@@ -204,7 +204,7 @@ public class TilePaint extends Entity {
 
 	public void onInventoryChanged() {
 		if (this.worldObj != null) {
-			((BetterWorld)this.worldObj).updateEntityChunkAndSendToPlayer(this.xCoord, this.yCoord, this.zCoord, this);
+			worldObj.updateEntityChunkAndSendToPlayer(this.xCoord, this.yCoord, this.zCoord, this);
 		}
 	}
 	public String getInvName() {

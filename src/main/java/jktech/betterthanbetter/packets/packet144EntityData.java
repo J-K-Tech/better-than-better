@@ -1,6 +1,7 @@
 package jktech.betterthanbetter.packets;
 
 import com.mojang.nbt.CompoundTag;
+import jktech.betterthanbetter.mixins.BetterNetHandler;
 import net.minecraft.core.net.handler.NetHandler;
 import net.minecraft.core.net.packet.Packet;
 import net.minecraft.core.net.packet.Packet140TileEntityData;
@@ -35,7 +36,7 @@ public class packet144EntityData extends Packet {
 
 	@Override
 	public void processPacket(NetHandler netHandler) {
-		((BetterNetHandler)(netHandler)).handleTileEntityData(this);
+		new BetterNetHandler().handleTileEntityData(this);
 	}
 
 	@Override

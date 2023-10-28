@@ -18,7 +18,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+        "jktech.betterthanbetter.btb"
     ]
   },
   "mixins": [

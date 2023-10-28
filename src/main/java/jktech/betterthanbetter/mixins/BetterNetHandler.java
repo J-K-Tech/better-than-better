@@ -1,18 +1,17 @@
-package jktech.betterthanbetter.packets;
+package jktech.betterthanbetter.mixins;
 
 
+import jktech.betterthanbetter.packets.packet144EntityData;
 import net.minecraft.core.net.handler.NetHandler;
 import net.minecraft.core.net.packet.Packet;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(NetHandler.class)
-public class BetterNetHandler extends NetHandler{
+public class BetterNetHandler{
 
 	public void handleTileEntityData(packet144EntityData packet) {
-		this.handleInvalidPacket(packet);
+		handleInvalidPacket(packet);
 	}
-
-	@Override
 	public boolean isServerHandler() {
 		return false;
 	}
